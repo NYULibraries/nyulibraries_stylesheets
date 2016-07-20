@@ -1,0 +1,49 @@
+.sidebar {
+  .navbar.navbar-default {
+    background-color: transparent;
+    border: 0;
+    .navbar-header {
+      float: none;
+      button.navbar-toggle {
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        background-color: $breadcrumb-bg;
+      }
+    }
+  }
+  h2, h3 {
+    @include sidebar;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    @include background-image(linear-gradient(color-stops($sidebar-header-bg, lighten($sidebar-header-bg, 5%))));
+    @include sidebar;
+    font-weight: normal;
+    i {
+      vertical-align: baseline;
+    }
+  }
+
+  h3 {
+    border-top: 2px solid $nyulibraries-border-color-light;
+  }
+
+  .sidebar-section {
+    @include border-bottom-radius($border-radius-base);
+    margin-bottom: $line-height-computed;
+    @include background-image(linear-gradient(color-stops($sidebar-bg, darken($sidebar-bg, 5%))));
+    ul {
+      @include sidebar;
+      @extend .list-unstyled !optional;
+      li {
+        margin: {
+          top: $line-height-computed;
+          bottom: $line-height-computed;
+        }
+      }
+    }
+  }
+}

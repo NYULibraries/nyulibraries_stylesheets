@@ -1,0 +1,61 @@
+$btn-default-bg: #5D0E8B;
+//$lightBtnBg: lighten( $btnBackground, 7% );
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.navbar-tabs .nav-tabs {
+    li > a {
+        color: $link-color;
+        border-top-color: #eaeaea;
+        @include background-image( linear-gradient(#eaeaea, #ccc) );
+        @include transition(border-color 150ms ease, color 150ms ease);
+
+        &:hover {
+            color: #5D0E8B;
+            text-decoration: none;
+        }
+
+        &:active {
+            @include background-image( linear-gradient(#ccc, #eaeaea) );
+        }
+    }
+    li.active > a {
+        border-color: #fafafa;
+        background-image: none;
+    }
+}
+
+.btn {
+    background: $btn-default-bg;
+    color: #eaeaea;
+    text-shadow: 0 1px 1px rgba(55, 55, 55, 0.75);
+    @include transition(background 150ms ease);
+
+    &:hover {
+        color: #fafafa;
+        background: lighten( $btn-default-bg, 7% );
+    }
+}
+
+.search input[type="text"] {
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  @include transition(border linear .2s, box-shadow linear .2s);
+
+  // Focus state
+  &:focus {
+    border-color: rgba($link-color, .6);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($link-color,.6));
+  }
+}

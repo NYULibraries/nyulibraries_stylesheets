@@ -1,0 +1,178 @@
+// Only large screens
+@media (min-width: 1200px) {
+  @include tabs-fullscreen;
+  .search {
+    &.with-tabs {
+      @include border-top-left-radius(0);
+    }
+  }
+}
+
+// Landscape tablets
+@media (max-width: 1199px) {
+  // Don't show popovers
+  .popover {
+    display: none !important;
+  }
+  .nyu-tip {
+    float: none;
+    width: auto;
+  }
+
+  // Collapse tabs
+  @include tabs-responsive;
+
+  div.btn-toolbar {
+    div.btn-group {
+      float: none !important;
+      margin-left: 0;
+      margin-left: $line-height-computed/2;
+      margin-bottom: $line-height-computed/2;
+    }
+
+    ul {
+      // float: none !important
+      right: auto !important;
+      left: 0px !important;
+    }
+  }
+}
+
+// Only landscape tablets and large screens
+@media (min-width: 979px) {
+}
+
+// Portrait tables
+@media (max-width: 979px) {
+  // Sidebar styles
+  .sidebar {
+    // Bump the font for easier touch interaction
+    font: {
+      size: $font-size-base*1.25;
+    }
+
+    // Adjust spacing for easier touch interaction
+    .sidebar-section {
+      margin-bottom: $line-height-computed;
+      ul {
+        li {
+          margin: {
+            top: $line-height-computed*1.25;
+            bottom: $line-height-computed*1.25;
+          }
+        }
+      }
+    }
+  }
+
+  // Breadcrumb styles
+  .nyu-breadcrumbs {
+    li.nyu-login {
+      height: $line-height-computed;
+      [class*="icons"], {
+        background-image: none;
+        padding: 0px;
+      }
+    }
+    // Don't show the first breadcrumb
+    // to save space
+    li:first-child {display: none;}
+    li:nth-child(2):before {
+      content: "";
+    }
+  }
+
+  // Bump the font and adjust spacing for easier touch interaction
+  // in results
+  .result {
+    font-size: $font-size-base*1.25;
+    line-height: $line-height-computed*2;
+    dl {
+      dt, dd {
+        padding-top: $line-height-computed;
+      }
+    }
+  }
+
+  // Make form display a bit more predictable
+  form {
+    display: block !important;
+    float: none !important;
+  }
+
+  // Make xlarge inputs a bit smaller for tablets
+  .input-xlarge {
+    width: 270px - 24px;
+  }
+
+  div.appetizer {
+    .content-type {
+      margin-left: 0px;
+      figcaption {
+        display: none;
+      }
+    }
+  }
+
+  div.entree {
+    padding-left: 5.8011% - 2.5643%;
+    margin-left: 100px;
+  }
+}
+
+// Phones to tablets
+@media (max-width: 767px) {
+  .form-horizontal .control-label {
+    text-align: left;
+    width: auto;
+    margin-left: 0;
+  }
+  // Adjust spacing for easier touch interaction
+  .nyu-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // Make xlarge inputs a bit larger for phones
+  .input-xlarge {
+    width: 270px !important;
+  }
+
+  div.appetizer {
+    width: 11% !important;
+  }
+
+  div.entree {
+    margin-left: 12% !important;
+    padding-left: 5% !important;
+    width: 87% !important;
+  }
+}
+
+// Phones
+@media (max-width: 480px) {
+  #header .institution { float: none; }
+
+  .form-horizontal .controls {
+    margin-left: 0;
+    label {
+      display: block;
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  label {
+    margin-left: 0px;
+  }
+
+  .control-label {
+    width: auto !important;
+    text-align: left !important;
+  }
+}

@@ -1,0 +1,23 @@
+header {
+  background: {
+    image: image-url("nyulibraries/nyu/header.png");
+    position: 21px 21px;
+    repeat: no-repeat;
+    color: $nyu-purple;
+  }
+  height: 69px;
+
+  a {
+    float: left;
+    height: 69px;
+    width: 209px;
+  }
+
+  span {
+    visibility: hidden;
+  }
+
+  .institution {
+    float: right;
+  }
+}

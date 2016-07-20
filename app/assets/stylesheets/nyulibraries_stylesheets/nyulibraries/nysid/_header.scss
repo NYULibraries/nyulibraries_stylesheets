@@ -1,0 +1,27 @@
+.header {
+	background: {
+		image: image-url("nyulibraries/nysid/header.png");
+		color: transparent;
+		repeat: no-repeat, repeat-x;
+    position: top left;
+	}
+}
+#header {
+	background: {
+		image: image-url("nyulibraries/nysid/header.jpg");
+		color: transparent;
+		repeat: no-repeat, repeat-x;
+	}
+	background-color: transparent;
+	background-repeat: no-repeat, repeat-x;
+	height: 161px;
+	border-bottom: 8px solid $nysid-secondary-bg;
+	background-size: 153px;
+}
+header {
+	a {
+		float: left;
+		height: 161px !important;
+		width: 125px !important;
+	}
+}

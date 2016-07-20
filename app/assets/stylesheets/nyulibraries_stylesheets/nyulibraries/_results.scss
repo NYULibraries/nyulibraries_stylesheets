@@ -1,0 +1,95 @@
+.results {
+  @extend .separator;
+  background-color: $results-bg;
+}
+
+.result {
+  @extend .well;
+  @extend .well-sm;
+  margin-bottom: $line-height-computed/2;
+  padding-right: 2px;
+  @include clearfix;
+}
+
+.record_tag_list {
+  a[id*="edit"] {
+    margin-left: 5px;
+  }
+  a:hover.muted {
+    text-decoration: none;
+  }
+  .muted {
+    font-size: 90%;
+  }
+  label {
+    margin-left: 0px;
+  }
+}
+
+div.appetizer {
+  min-height: 94px !important;
+  float: left !important;
+  div.number {
+    margin-right: $line-height-computed;
+  }
+  .content-type {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  label {
+    margin-top: 0px;
+  }
+}
+
+div.entree {
+  min-height: 94px !important;
+  margin-left: 10%;
+  padding-left: 3%;
+  border-left: 1px solid;
+  border-left: 1px solid lighten($nyulibraries-border-color-light, 8%);
+  h2.title {
+    margin-top: 0px;
+  }
+  div.frbr {
+    margin-bottom: $padding-base-vertical / 6;
+  }
+  div.fulldetails {
+    margin-top: $padding-base-vertical / 3;
+  }
+  div.author {
+    margin-bottom: $padding-base-vertical / 6;
+  }
+  div.locations {
+    margin: ($padding-base-vertical / 3) 0;
+  }
+  div.delivery {
+    font-size: 125%;
+    margin: ($padding-base-vertical / 3) 0;
+    span {
+      font-weight: bold;
+      &.getItText { font-weight: normal; }
+    }
+  }
+  div.save_record {
+    margin: .5em 0;
+    ul {
+      @include no-padding;
+      @include no-margin;
+      display: inline;
+      li {
+        @include no-padding;
+        @include no-margin;
+        display: inline;
+        &.separator {	margin: 0 ($padding-base-horizontal / 6); }
+      }
+    }
+  }
+  div.dessert, div.desert {
+    @include float-right;
+    margin-left: $padding-base-horizontal * (2/3);
+  }
+}

@@ -1,0 +1,17 @@
+// Main Header
+header {
+  background: {
+    image: image-url("nyulibraries/nyuad/header.png");
+    attachment: scroll;
+    repeat: no-repeat;
+    position: 30px;
+    color: $nyu-purple;
+  }
+  height: 171px;
+  margin: 0px 0 0 0 !important;
+  a {
+    float: left;
+    height: 160px !important;
+    width: 300px !important;
+  }
+}

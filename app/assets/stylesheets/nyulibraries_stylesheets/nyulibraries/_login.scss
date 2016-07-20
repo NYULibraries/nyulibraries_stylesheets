@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$login-box-spacing-half: 7px;
+$login-box-spacing: $login-box-spacing-half*2;
+$login-help-color: #008996;
+$login-box-shadow-color: rgba(172,172,172,.64);
+$login-label-color: #9B9B9B;
+$login-text-color: #4a4a4a;
+
+@mixin container-box() {
+  // Shadow around it
+  border: 1px solid rgb(224,224,224);
+  border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+  box-shadow: 0 1px 0 $login-box-shadow-color;
+    -moz-box-shadow: 0 1px 0 $login-box-shadow-color;
+    -webkit-box-shadow: 0 1px 0 $login-box-shadow-color;
+}
+
+#logins {
+  &.ns-container {
+    div.primary-login, div.alt-login {
+      &#nysid-login {
+        background-color: $nysid-bg !important;
+      }
+      &#ns-login {
+        background-color: $ns-bg !important;
+      }
+    }
+  }
+  @include container-box();
+  font-family: 'Montserrat', sans-serif;
+  &.options-container {
+    h2.help {
+      font-size: 150%;
+    }
+  }
+  &.auth-container {
+    h1 {
+      font-size: 150%;
+    }
+  }
+  .inner-container {
+    max-width: 800px;
+    margin: 0 auto;
+    h1, h2 { padding: 7px; }
+  }
+  // Center it
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  max-width: 1024px;
+
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 200%;
+    line-height: 1em;
+  }
+  h2.help {
+    position: relative;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 120%;
+    .circle {
+      color: $login-help-color;
+    }
+    span.help_text {
+      position: absolute;
+      line-height: 33px;
+      margin-left: 10px;
+    }
+    a {
+      color: $login-help-color;
+    }
+  }
+  div.row {
+    margin-bottom: 15px;
+  }
+  div.primary-login, div.alt-login {
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: center;
+    min-height: 125px;
+    font-size: 220%;
+    .alt-login-link {
+      display: table-cell; /* Fix for Opera and Firefox */
+      text-align: center;
+      vertical-align: middle;
+      width: 100%;
+      > span {
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Works in IE */
+        -webkit-transform: translateY(-50%); /* Safari fix */
+        width: 100%;
+      }
+      a {
+        span { display: none; }
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 100;
+        &:hover {
+          text-decoration: none;
+        }
+        &:active {
+          color: white;
+        }
+        &:visited {
+          color: white
+        }
+      }
+    }
+    &.square, &.primary-login {
+      height: 0;
+      position: relative;
+      padding-bottom: 23%;
+      padding-right: 0;
+      padding-left: 0;
+      // Make a white border to simulate spacing
+      // without having to change bootstrap percentages
+      border-right: $login-box-spacing-half solid white;
+      border-left: $login-box-spacing-half solid white;
+    }
+    &.primary-login {
+      font-size: 500%;
+      &#ns-login {
+        font-size: 400%;
+      }
+    }
+    &#nyu_shibboleth-login {
+      background-color: $nyu-purple;
+    }
+    &#bobst-login {
+      background-color: $bobst-bg;
+    }
+    &#nysid-login {
+      background-color: $nysid-secondary-bg;
+    }
+    &#cu-login {
+      background-color: $cu-bg;
+    }
+    &#ns-login {
+      background-color: $ns-secondary-bg;
+    }
+    &#visitor-login {
+      background-color: $visitor-bg;
+    }
+    &#facebook-login {
+      background-color: $facebook-bg;
+      padding-bottom: 30.6%;
+    }
+    &#twitter-login {
+      background-color: $twitter-bg;
+      padding-bottom: 30.6%;
+    }
+    &#facebook-login, &#twitter-login {
+      font-size: 200%;
+    }
+  }
+
+  &.auth-container {
+    padding: 0 50px;
+    max-width: 600px;
+    h1 {
+      padding-left: 0;
+    }
+    label {
+      margin-left: 0;
+      margin-bottom: 5px;
+      color: $login-label-color;
+      font-weight: 100;
+    }
+    form {
+      input {
+        border-radius: 0;
+      }
+      input[type='submit'] {
+        text-transform: uppercase;
+        font-weight: 100;
+        color: white;
+      }
+      &.ns-login-form {
+        input[type='submit'] { background-color: $ns-bg; }
+      }
+      &.cu-login-form {
+        input[type='submit'] { background-color: $cu-bg; }
+      }
+      &.nysid-login-form {
+        input[type='submit'] { background-color: $nysid-bg; }
+      }
+      &.bobst-login-form {
+        input[type='submit'] { background-color: $bobst-bg; }
+      }
+    }
+  }
+  // Popover
+  .popover {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $login-text-color;
+    .footer-help {
+      width: 20em;
+    }
+    h3 {
+      font-size: 100%;
+      margin: 0;
+      padding: 9px 14px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: normal;
+    }
+    max-width: 50em;
+    a {
+      font-weight: bold;
+      color: $nyu-purple !important;
+    }
+  }
+}
+
+// Change spacing between rows for phones
+@media only screen and (max-width: 767px) {
+  #logins {
+    div.row {
+      margin-bottom: 0;
+    }
+    &.auth-container {
+      padding: 0 25px;
+    }
+    div.primary-login {
+      font-size: 220% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 997px) {
+  #logins {
+    &.options-container {
+      border: none;
+      box-shadow: none;
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

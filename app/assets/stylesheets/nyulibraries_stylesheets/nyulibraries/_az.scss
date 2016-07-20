@@ -1,0 +1,29 @@
+// Az links based on bootstrap pagination, but tweaked, among other
+// things to wrap better. a-z links are ridiculous, but expected by
+// our users.
+.nyu-az {
+  @include clearfix;
+  a, span {
+    float: left;
+    margin-bottom: $line-height-computed / 4;
+    margin-right: $line-height-computed / 4;
+    @include border-radius(4px);
+    padding: 4px 8px;
+    border: 1px solid $az-border-color;
+    line-height: $line-height-computed;
+    text-decoration: none;
+    color: $az-link-color;
+    background-color: $pagination-bg;
+    &:hover {
+      background-color: $pagination-active-bg;
+    }
+
+    &.active {
+      background-color: transparent;
+      color: inherit;
+      &:hover {
+      background-color: transparent;;
+      }
+    }
+  }
+}

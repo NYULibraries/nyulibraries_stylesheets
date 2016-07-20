@@ -1,0 +1,49 @@
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+header {
+  @include nyu-container-padding;
+  border-bottom: 1px solid $nyulibraries-border-color;
+}
+
+footer {
+  @include nyu-container-padding;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid $nyulibraries-border-color;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: $font-size-base * 1.25;
+  line-height: $line-height-computed * 1.25;
+}
+
+h2 {
+  @extend h1;
+  line-height: $line-height-computed * 1.25;
+}
+
+h3 {
+  @extend h1;
+  font-size: $font-size-base;
+  line-height: $line-height-computed;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+
+label {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a {
+  @include transition(color 0.3s ease-in-out, background-image 0.3s ease-in-out);
+}

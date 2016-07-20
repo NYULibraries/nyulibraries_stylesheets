@@ -1,0 +1,31 @@
+.eshelf-header {
+  background-color: $body-bg;
+  h1 {
+    padding: {
+      left: 95px;
+      top: 10px;
+      bottom: 0;
+    }
+    margin-bottom: 0;
+    background-image: url('https://library.nyu.edu/images/common/eshelf.gif');
+    background-repeat: no-repeat;
+    font-size: 300%;
+    display: inline;
+    font-weight: normal;
+    height: $eshelf-header-height;
+    line-height: $eshelf-header-line-height;
+  }
+
+  .username {
+    font-size: 100%;
+    padding-left: 1em;
+  }
+}
+
+.back-to {
+  text-align: right;
+  height: $eshelf-header-height;
+  line-height: $eshelf-header-line-height;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

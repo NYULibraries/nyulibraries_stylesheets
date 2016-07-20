@@ -42,7 +42,7 @@ module NyulibrariesStylesheets
     end
 
     def register_rails_engine
-      require 'bootstrap-sass/engine'
+      require 'nyulibraries_stylesheets/engine'
     end
   end
 end

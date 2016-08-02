@@ -1,3 +1,5 @@
+require 'sass'
+require 'bootstrap-sass'
 require "nyulibraries_stylesheets/version"
 
 module NyulibrariesStylesheets
@@ -28,7 +30,6 @@ module NyulibrariesStylesheets
     private
 
     def configure_sass
-      require 'sass'
       ::Sass.load_paths << stylesheets_path
     end
 

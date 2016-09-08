@@ -8,6 +8,8 @@ In a Rails project, the engine automatically includes the SCSS stylesheets in th
 
 ## Upgrading from Nyulibraries::Assets
 
+Font Awesome is no longer included by default.
+
 Stylesheets are now namespaced under `nyulibraries_stylesheets` when included in the client project. For example, you will need to replace
 
 ```

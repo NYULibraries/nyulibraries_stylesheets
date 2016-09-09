@@ -8,7 +8,7 @@ In a Rails project, the engine automatically includes the SCSS stylesheets in th
 
 ## Upgrading from Nyulibraries::Assets
 
-Font Awesome is no longer included by default.
+Font Awesome and JQuery UI stylesheets are no longer included by default.
 
 Stylesheets are now namespaced under `nyulibraries_stylesheets` when included in the client project. For example, you will need to replace
 
@@ -20,4 +20,10 @@ with:
 
 ```
 @import "nyulibraries_stylesheets/nyulibraries";
+```
+
+Compass generates an icon file on load that you may want to add to you `.gitignore`, e.g. in a Rails project:
+
+```
+app/assets/images/nyulibraries_stylesheets/icons-*.png
 ```

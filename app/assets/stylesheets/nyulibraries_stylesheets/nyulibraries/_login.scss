@@ -178,6 +178,9 @@ $login-text-color: #4a4a4a;
       color: $login-label-color;
       font-weight: 100;
     }
+    .help-block {
+      color: $login-label-color;
+    }
     form {
       input {
         border-radius: 0;

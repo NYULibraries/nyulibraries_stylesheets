@@ -1,9 +1,10 @@
 header {
   background: {
-    image: image-url("nyulibraries_stylesheets/nyulibraries/nyu/header.png");
+    image: url("https://cdn.library.nyu.edu/images/nyulibraries-logo.svg");
     position: 21px 21px;
     repeat: no-repeat;
     color: $nyu-purple;
+    size: 210px;
   }
   height: 69px;
 

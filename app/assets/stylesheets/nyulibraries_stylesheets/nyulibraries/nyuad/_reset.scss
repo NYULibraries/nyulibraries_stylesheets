@@ -12,3 +12,20 @@ h2 {
 h2 strong {
   font-weight: normal;
 }
+
+.alert {
+  h2 {
+    color: #a94442;
+  }
+  a {
+    color: blue;
+  }
+  .close {
+    color: #484848;
+    opacity: 100;
+  }
+}
+
+h2 .help_text {
+  color: #484848;
+}

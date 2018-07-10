@@ -48,3 +48,9 @@
 input[type="submit"] {
   @extend .btn;
 }
+
+input, button {
+  &.form-control:focus, &:focus {
+    @include focus;
+  }
+}

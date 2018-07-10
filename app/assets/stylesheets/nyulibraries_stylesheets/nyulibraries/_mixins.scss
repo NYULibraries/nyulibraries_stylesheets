@@ -48,6 +48,13 @@
   }
 }
 
+@mixin focus {
+  -webkit-box-shadow: inset 0 0 0 2px $focus-color;
+  box-shadow: inset 0 0 0 2px $focus-color;
+  overflow: -moz-hidden-unscrollable;
+  outline: none;
+}
+
 @mixin tabs-fullscreen {
   .navbar-tabs {
     border: none;

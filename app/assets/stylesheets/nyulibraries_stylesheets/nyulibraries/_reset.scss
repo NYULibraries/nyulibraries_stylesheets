@@ -50,3 +50,13 @@ a {
     @include focus;
   }
 }
+
+.alert {
+  .close {
+    color: #484848;
+    opacity: 100;
+  }
+  a {
+    color: blue;
+  }
+}

@@ -2,9 +2,9 @@
 
 $login-box-spacing-half: 7px;
 $login-box-spacing: $login-box-spacing-half*2;
-$login-help-color: #008996;
+$login-help-color: #008390;
 $login-box-shadow-color: rgba(172,172,172,.64);
-$login-label-color: #9B9B9B;
+$login-label-color: #585858;
 $login-text-color: #4a4a4a;
 
 @mixin container-box() {
@@ -17,6 +17,8 @@ $login-text-color: #4a4a4a;
     -moz-box-shadow: 0 1px 0 $login-box-shadow-color;
     -webkit-box-shadow: 0 1px 0 $login-box-shadow-color;
 }
+
+.fa-twitter, .fa-facebook-square { display: block; }
 
 #logins {
   &.ns-container {
@@ -37,14 +39,14 @@ $login-text-color: #4a4a4a;
     }
   }
   &.auth-container {
-    h1 {
+    .heading {
       font-size: 150%;
     }
   }
   .inner-container {
     max-width: 800px;
     margin: 0 auto;
-    h1, h2 { padding: 7px; }
+    .heading, h2.help { padding: 7px; }
   }
   // Center it
   margin-right: auto;
@@ -53,7 +55,7 @@ $login-text-color: #4a4a4a;
   margin-bottom: 50px;
   max-width: 1024px;
 
-  h1 {
+  .heading {
     margin-top: 50px;
     margin-bottom: 25px;
     font-weight: bold;
@@ -82,39 +84,33 @@ $login-text-color: #4a4a4a;
     margin-bottom: 15px;
   }
   div.primary-login, div.alt-login {
-    font-weight: bold;
-    line-height: 1.2em;
     text-align: center;
     min-height: 125px;
     font-size: 220%;
-    .alt-login-link {
+    h2 {
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 100%;
       display: table-cell; /* Fix for Opera and Firefox */
       text-align: center;
       vertical-align: middle;
       width: 100%;
-      > span {
+      line-height: 1.2em;
+      a {
         color: white;
         position: absolute;
         top: 50%;
         transform: translateY(-50%); /* Works in IE */
         -webkit-transform: translateY(-50%); /* Safari fix */
         width: 100%;
-      }
-      a {
-        span { display: none; }
-        height: 100%;
-        width: 100%;
         display: block;
         position: absolute;
         z-index: 100;
         &:hover {
-          text-decoration: none;
+          text-decoration: underline;
         }
-        &:active {
+        &:active, &:visited {
           color: white;
-        }
-        &:visited {
-          color: white
         }
       }
     }
@@ -169,7 +165,7 @@ $login-text-color: #4a4a4a;
   &.auth-container {
     padding: 0 50px;
     max-width: 600px;
-    h1 {
+    .heading {
       padding-left: 0;
     }
     label {
@@ -206,7 +202,7 @@ $login-text-color: #4a4a4a;
   }
   // Popover
   .popover {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     color: $login-text-color;
     .footer-help {
       width: 20em;
@@ -249,7 +245,7 @@ $login-text-color: #4a4a4a;
     &.options-container {
       border: none;
       box-shadow: none;
-      h1 {
+      .heading {
         margin-top: 0;
         margin-bottom: 0;
       }

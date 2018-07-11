@@ -1,8 +1,8 @@
 footer {
   border: none;
-  color: darken(whiteSmoke, 20%);
+  color: #585858;
   a {
-    color: darken(whiteSmoke, 35%);
+    color: #333;
     text-decoration: underline;
     &:hover { text-decoration: none; }
   }

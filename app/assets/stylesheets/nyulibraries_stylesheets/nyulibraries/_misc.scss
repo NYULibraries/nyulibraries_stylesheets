@@ -39,3 +39,48 @@
 .btn {
   line-height: $line-height-large-computed;
 }
+
+// ACCESSIBILITY
+
+// Borrowed from Bootstrap
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.skip-nav a {
+  position: absolute;
+  left: -10000;
+  top: 0;
+  width: 1px;
+  height: auto;
+  overflow: hidden;
+}
+.skip-nav a:focus {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: auto;
+  height: auto;
+  z-index: 999999;
+  background-color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow: visible;
+}

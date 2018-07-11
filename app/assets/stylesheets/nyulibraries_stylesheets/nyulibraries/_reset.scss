@@ -46,4 +46,17 @@ label {
 
 a {
   @include transition(color 0.3s ease-in-out, background-image 0.3s ease-in-out);
+  &:focus {
+    @include focus;
+  }
+}
+
+.alert {
+  .close {
+    color: #484848;
+    opacity: 100;
+  }
+  a {
+    color: blue;
+  }
 }

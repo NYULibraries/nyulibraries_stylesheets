@@ -12,3 +12,13 @@ h2 {
 h2 strong {
   font-weight: normal;
 }
+
+.alert {
+  h2 {
+    color: #a94442;
+  }
+}
+
+h2 .help_text {
+  color: #484848;
+}

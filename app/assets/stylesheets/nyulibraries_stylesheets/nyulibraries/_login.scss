@@ -4,7 +4,7 @@ $login-box-spacing-half: 7px;
 $login-box-spacing: $login-box-spacing-half*2;
 $login-help-color: #008390;
 $login-box-shadow-color: rgba(172,172,172,.64);
-$login-label-color: #585858;
+$login-label-color: #333;
 $login-text-color: #4a4a4a;
 
 @mixin container-box() {
@@ -17,8 +17,6 @@ $login-text-color: #4a4a4a;
     -moz-box-shadow: 0 1px 0 $login-box-shadow-color;
     -webkit-box-shadow: 0 1px 0 $login-box-shadow-color;
 }
-
-.fa-twitter, .fa-facebook-square { display: block; }
 
 #logins {
   &.ns-container {
@@ -154,11 +152,20 @@ $login-text-color: #4a4a4a;
       padding-bottom: 30.6%;
     }
     &#twitter-login {
-      background-color: $twitter-bg;
+      background-color: white;
       padding-bottom: 30.6%;
+      box-shadow: 0px 0px 0px 2px $twitter-bg inset;
+      box-sizing: border-box;
+      a {
+        color: #000;
+      }
     }
     &#facebook-login, &#twitter-login {
       font-size: 200%;
+      .fa-twitter, .fa-facebook-square { display: block; }
+      .fa-twitter {
+        color: $twitter-logo-color;
+      }
     }
   }
 
@@ -178,25 +185,34 @@ $login-text-color: #4a4a4a;
       color: $login-label-color;
     }
     form {
+      fieldset {
+        margin-top: 50px;
+      }
+      legend {
+        font-weight: bold;
+        font-size: 150%;
+        line-height: 1em;
+      }
       input {
         border-radius: 0;
       }
       input[type='submit'] {
         text-transform: uppercase;
         font-weight: 100;
-        color: white;
+        color: #333;
+        background-color: white;
       }
       &.ns-login-form {
-        input[type='submit'] { background-color: $ns-bg; }
+        input[type='submit'] { border: 2px solid $ns-bg; }
       }
       &.cu-login-form {
-        input[type='submit'] { background-color: $cu-bg; }
+        input[type='submit'] { border: 2px solid $cu-bg; }
       }
       &.nysid-login-form {
-        input[type='submit'] { background-color: $nysid-bg; }
+        input[type='submit'] { border: 2px solid $nysid-bg; }
       }
       &.bobst-login-form {
-        input[type='submit'] { background-color: $bobst-bg; }
+        input[type='submit'] { border: 2px solid $bobst-bg; }
       }
     }
   }

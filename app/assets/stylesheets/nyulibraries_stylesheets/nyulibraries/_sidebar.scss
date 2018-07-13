@@ -19,7 +19,7 @@
   }
 
   h2 {
-    @include background-image(linear-gradient(color-stops($sidebar-header-bg, lighten($sidebar-header-bg, 5%))));
+    background-color: $sidebar-header-bg;
     @include sidebar;
     font-weight: normal;
     i {
@@ -34,7 +34,7 @@
   .sidebar-section {
     @include border-bottom-radius($border-radius-base);
     margin-bottom: $line-height-computed;
-    @include background-image(linear-gradient(color-stops($sidebar-bg, darken($sidebar-bg, 5%))));
+    background-color: $sidebar-bg;
     ul {
       @include sidebar;
       @extend .list-unstyled !optional;

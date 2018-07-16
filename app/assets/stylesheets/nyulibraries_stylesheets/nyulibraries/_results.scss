@@ -93,3 +93,7 @@ div.entree {
     margin-left: $padding-base-horizontal * (2/3);
   }
 }
+
+.pagination > .disabled > a {
+  color: #666;
+}

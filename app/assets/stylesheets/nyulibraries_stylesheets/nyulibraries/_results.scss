@@ -94,6 +94,8 @@ div.entree {
   }
 }
 
-.pagination > .disabled > a {
-  color: #666;
+.pagination > .disabled {
+  a, span {
+    color: #666;
+  }
 }
